@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  ts3:
+    container_name: teamspeak
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+    volumes:
+      - "data:/var/ts3server"
+    environment:
+      TS3SERVER_LICENSE: accept
+    healthcheck:
+      test: nc -z 0.0.0.0 10011
+      interval: 5s
+      timeout: 10s
+      retries: 3
+    restart: always
+
+volumes:
+  data:
