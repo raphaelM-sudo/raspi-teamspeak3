@@ -8,3 +8,5 @@ Simply run the easy-install.sh script which will create the correct ExaGear imag
 ./easy-install.sh <PI_VERSION> <TS3_VERSION>
 ```
 
+## Configuration
+The configuration works in the same way as in the official [docker image](https://hub.docker.com/_/teamspeak)
